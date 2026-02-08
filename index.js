@@ -15,6 +15,15 @@ const app = express();
 app.use(cookieParser());
 const PORT = process.env.PORT || 1000;
 
+const __dirname = path.resolve();
+
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// SPA fallback (VERY IMPORTANT for BrowserRouter)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
 // Middleware
 app.use(cors({
   origin: [
