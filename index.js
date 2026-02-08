@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 app.use(cookieParser());
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 1000;
 
 // Middleware
 app.use(cors({
