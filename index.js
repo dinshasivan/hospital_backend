@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 1000;
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://bespoke-starlight-94a774.netlify.app/"
+    "https://bespoke-starlight-94a774.netlify.app"
   ], // Update with your frontend URL
   credentials: true, // Allow cookies to be sent
 }));
